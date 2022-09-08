@@ -1,5 +1,5 @@
 #include <iostream>
-class Base1
+class Base
 {
 	public:
 		void a()
@@ -8,7 +8,7 @@ class Base1
 		}
 
 };
-class Base2
+class derived1:public Base
 {
 	public:
 	void d()
@@ -17,7 +17,7 @@ class Base2
 	}
 };
 
-class Derived:public Base1,public Base2
+class Derived2:public derived1
 {
 	public:
 		void b()
@@ -28,9 +28,9 @@ class Derived:public Base1,public Base2
 
 int main()
 {
-	Derived obj;
+	Derived2 obj;
 	obj.b();
-	obj.a();
 	obj.d();
+	obj.a();
 	return 0;
 }
